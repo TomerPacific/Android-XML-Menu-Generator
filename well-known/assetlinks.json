@@ -1,5 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.tomerpacific.androidmenuxmlgenerator",
-               "sha256_cert_fingerprints": ["65:97:8B:EC:29:91:77:D8:70:89:C6:1A:0F:F2:A2:60:21:2D:A2:55:1F:DA:03:B3:28:2F:47:7A:E3:7A:27:3B"] }
+  "target" : { "namespace": "android_app", "package_name": "com.tomerpacific.androidmenugenerator",
+               "sha256_cert_fingerprints": ["92:E8:20:8B:0E:34:A6:A6:BA:61:03:7F:B6:1F:4A:2A:69:4B:CF:5B:3F:C5:E9:9C:0F:0E:82:01:C6:AF:E1:E4"] }
 }]

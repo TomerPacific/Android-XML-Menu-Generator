@@ -52,15 +52,22 @@ button, input, select, option {
 #instructions {
     font-family: 'Carter One', cursive;
     margin-top: 4%;
+    font-size: 1.5em;
 }
 
 #explanation {
     list-style-position: inside;
-    font-size: 1.5em;
     font-family: 'Carter One', cursive;
     margin-top:2%;
 }
 
 #generate_menu{
     color: #24bfb9;
+}
+
+
+@media screen and (max-width: 500px) {
+ #instructions {
+    font-size: 1em;
+  }
 }

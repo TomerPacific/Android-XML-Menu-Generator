@@ -52,8 +52,6 @@ button, input, select, option {
 #instructions {
     font-family: 'Carter One', cursive;
     margin-top: 4%;
-    border: 2px solid #444750;
-    width: 40%;
 }
 
 #explanation {

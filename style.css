@@ -5,6 +5,8 @@ body {
     color: #444750;
     font-size: 13px;
     font-family: 'Oleo Script', cursive;
+    position: relative;
+    min-height: 100vh;
 }
 
 header {
@@ -53,6 +55,7 @@ button, input, select, option {
     font-family: 'Carter One', cursive;
     margin-top: 4%;
     font-size: 1.5em;
+    padding-bottom: 2.5rem;
 }
 
 #explanation {
@@ -65,9 +68,42 @@ button, input, select, option {
     color: #24bfb9;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li a {
+    text-decoration: none !important;
+    color: white;
+}
+
+footer ul li a:hover {
+    color: #24bfb9;
+}
 
 @media screen and (max-width: 500px) {
- #instructions {
-    font-size: 1em;
-  }
+    #instructions {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
 }

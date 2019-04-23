@@ -168,7 +168,8 @@ function copyText() {
   	document.execCommand("copy");
 }
 
-function sendMail() {
+function sendMail(e) {
+	e.preventDefault();
 	let mailInput = document.getElementById("email");
 	if (!mailInput.value || !emailNotValid(mailInput.value) || !xml.value) {
 		mailInput.value = "";

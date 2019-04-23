@@ -19,6 +19,10 @@ button, input, select, option {
     font-size: 13px;
 }
 
+textarea {
+    resize: none;
+}
+
 #generateMenu, #copyXML {
     padding-top: 15px;
 }

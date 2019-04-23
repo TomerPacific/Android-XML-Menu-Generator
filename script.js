@@ -164,7 +164,25 @@ function generateMenu() {
 
 
 function copyText() {
-
 	xml.select();
   	document.execCommand("copy");
+}
+
+function sendMail() {
+	let mailInput = document.getElementById("email");
+	if (!mailInput.value || !emailNotValid(mailInput.value) || !xml.value) {
+		mailInput.value = "";
+		return;
+	} else {
+		var link = "mailto:" + mailInput.value + "&subject=" + escape("Android XML Menu")
+             + "&body=" + escape(xml.innerHTML);
+
+    window.location.href = link;
+	}
+}
+
+function emailNotValid(email) {
+	var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	return email.match(emailRegex);
 }

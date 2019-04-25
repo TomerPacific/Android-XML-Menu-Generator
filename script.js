@@ -175,11 +175,20 @@ function sendMail(e) {
 		mailInput.value = "";
 		return;
 	} else {
-		var link = "mailto:" + mailInput.value + "&subject=" + escape("Android XML Menu")
-             + "&body=" + escape(xml.innerHTML);
-
-    window.location.href = link;
+		Email.send({
+			    SecureToken : "0a44347d-fa93-486b-8ede-d98a744f0526",
+			    To : mailInput.value,
+			    From : "tomerpacific@gmail.com",
+			    Subject : "Android XML Menu Generator",
+			    Body : xml.innerHTML.toString()
+			}).then(
+		  		function(message) {
+		  		 alert("Your email has been sent!");
+		  		location.reload();
+		  		}
+			);
 	}
+	
 }
 
 function emailNotValid(email) {

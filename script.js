@@ -183,7 +183,7 @@ function sendMail(e) {
 			    Body : xml.innerHTML.toString()
 			}).then(
 		  		function(message) {
-		  		 alert("Your email has been sent!");
+		  		 alert("Your email has been sent! Check your spam folder if you don't find it in the main one");
 		  		location.reload();
 		  		}
 			);

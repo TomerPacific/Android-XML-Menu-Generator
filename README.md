@@ -9,3 +9,11 @@ Users can choose from 3 different types of menus:
 - Context
 
 - Popup
+
+After choosing the type of menu, you choose the amount of menu items you want to have. Each menu item has the following fields:
+
+- Id
+
+- Icon
+
+- Title

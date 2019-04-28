@@ -2,7 +2,7 @@
   "name": "Android Menu Renderer",
   "short_name": "Android Menu",
   "icons": [{
-      "src" : "/icon_512.png",
+      "src" : "https://github.com/TomerPacific/PWA/blob/master/icon_512.png?raw=true",
       "type": "image/png",
       "sizes": "512x512"
     }],

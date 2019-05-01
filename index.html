@@ -111,7 +111,13 @@
     if('serviceWorker' in navigator) {
       navigator.serviceWorker
                .register('sw.js')
-               .then(function() { console.log("Service Worker Registered"); });
+               .then(function() { 
+                console.log("Service Worker Registered");
+            }, function() {
+                console.log("Service Worker Not Registered")
+            });
+    } else {
+        console.log("Service Worker Not Supported");
     }
 </script>
 </body>

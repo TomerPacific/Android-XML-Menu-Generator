@@ -9,6 +9,8 @@ self.addEventListener('install', function(e) {
        '/style.css',
        '/script.js'
      ]);
+   }).then(function() {
+   		console.log("Service Worker: Install completed");
    })
  );
 });

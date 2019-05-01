@@ -13,7 +13,7 @@ self.addEventListener('install', function(e) {
      return cache.addAll(urlsToCache);
    }).then(function() {
    		console.log("Service Worker: Install completed");
-   }).catch(function(error)) {
+   }).catch(function(error) {
    	console.log("Service Worker: " + error);
    }
  );

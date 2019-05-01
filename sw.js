@@ -1,5 +1,3 @@
-importScripts('serviceworker-cache-polyfill.js');
-
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('androidmenugenerator').then(function(cache) {

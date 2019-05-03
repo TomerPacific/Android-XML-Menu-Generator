@@ -23,7 +23,7 @@ textarea {
     resize: none;
 }
 
-form {
+#sendMail {
     display: inline-block;
     float: right;
 }

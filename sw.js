@@ -15,6 +15,6 @@ self.addEventListener('install', function(e) {
    		console.log("Service Worker: Install completed");
    }).catch(function(error) {
    	console.log("Service Worker: " + error);
-   }
- );
+   })
+  ); 
 });

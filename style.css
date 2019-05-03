@@ -23,6 +23,11 @@ textarea {
     resize: none;
 }
 
+form {
+    display: inline-block;
+    float: right;
+}
+
 #generateMenu, #copyXML {
     padding-top: 15px;
 }

@@ -1,9 +1,9 @@
 var CACHE_NAME = 'androidmenugenerator';
 var urlsToCache = [
-	'/',
-   'index.html',
-   'style.css',
-   'script.js'
+	'./',
+   './index.html',
+   './style.css',
+   './script.js'
 ];
 
 

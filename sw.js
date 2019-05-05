@@ -5,16 +5,22 @@ var urlsToCache = [
 	'./',
    './index.html',
    './style.css',
-   './script.js'
+   './script.js',
+   'https://code.jquery.com/jquery-3.2.1.slim.min.js',
+   'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js',
+   'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css',
+   'https://smtpjs.com/v3/smtp.js'
 ];
 
 
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open(CACHE_NAME).then(function(cache) {
-     return cache.addAll(urlsToCache);
-   }).then(function() {
-   		console.log("Service Worker: Install completed");
+     return cache.addAll(urlsToCache.map(function(url) {
+      return new Request(url, {mode : 'no-cors'});
+     })).then(function() {
+      console.log("Service Worker: Install completed");
+     })
    }).catch(function(error) {
    	console.log("Service Worker: " + error);
    })

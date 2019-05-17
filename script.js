@@ -16,6 +16,7 @@ let typeOfMenu = document.getElementById("menus");
 let xml = document.getElementById('xml');
 let items = document.getElementById("items");
 let itemsForm = document.getElementById("itemForm");
+let inputMenuItems = document.getElementById("menuItems");
 let showAsActionSelect;
 
 function showAmountOfMenuItems() {
@@ -195,4 +196,15 @@ function emailNotValid(email) {
 	var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	return email.match(emailRegex);
+}
+
+
+function reset() {
+	itemsForm.innerHTML = "";
+	let menuType = '';
+	let amountOfMenuItems = 0;
+	let uniqueIdentifier = 0;
+	let optionsMenuFlag = false;
+	typeOfMenu.selectedIndex = 0;
+	inputMenuItems.value = "";
 }

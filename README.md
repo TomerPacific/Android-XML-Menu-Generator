@@ -1,4 +1,6 @@
-# [Android Menu Rendering Website](https://play.google.com/store/apps/details?id=com.tomerpacific.androidmenugenerator)
+# [Android Menu Rendering Website](https://tomerpacific.github.io/Android-XML-Menu-Generator/)
+
+## [Google Play Store](https://play.google.com/store/apps/details?id=com.tomerpacific.androidmenugenerator)
 
 ![Google Play Stpre Image](https://github.com/TomerPacific/Android-XML-Menu-Generator/blob/master/PlayStoreImage.jpg?raw=true)
 

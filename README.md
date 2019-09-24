@@ -1,6 +1,6 @@
-# [Android Menu Rendering Website](https://tomerpacific.github.io/Android-XML-Menu-Generator/)
+# [Android XML Menu Generator](https://tomerpacific.github.io/Android-XML-Menu-Generator/)
 
-## [Google Play Store](https://play.google.com/store/apps/details?id=com.tomerpacific.androidmenugenerator)
+## [Download Via Google Play Store](https://play.google.com/store/apps/details?id=com.tomerpacific.androidmenugenerator)
 
 ![Screenshot](https://github.com/TomerPacific/Android-XML-Menu-Generator/blob/master/screenshot.jpg?raw=true)
 

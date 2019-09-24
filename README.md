@@ -2,7 +2,7 @@
 
 ## [Google Play Store](https://play.google.com/store/apps/details?id=com.tomerpacific.androidmenugenerator)
 
-![Google Play Stpre Image](https://github.com/TomerPacific/Android-XML-Menu-Generator/blob/master/PlayStoreImage.jpg?raw=true)
+![Screenshot](https://github.com/TomerPacific/Android-XML-Menu-Generator/blob/master/screenshot.jpg?raw=true)
 
 This project's aim is to allow users to choose what type of menu they wish to add to their application and get the generated XML code for that menu.
 

@@ -18,6 +18,14 @@ After choosing the type of menu, you choose the amount of menu items you want to
 
 - Id
 
-- Icon
+- Icon (make sure to i)ort the asset into your project and reference it correctly)
 
 - Title
+
+When you are done filling out the desired properties for the menu items, press **Generate Menu**
+
+The XML will be rendered to the right in the textbox and you will have the ability to either:
+
+1. Copy the contents and paste them inside your IDE of choice
+
+2. Mail them to be used later (in case you are not on your laptop)

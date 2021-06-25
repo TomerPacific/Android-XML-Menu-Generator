@@ -113,12 +113,12 @@
       navigator.serviceWorker
                .register('sw.js')
                .then(function() { 
-                console.log("Service Worker Registered");
-            }, function() {
-                console.log("Service Worker Not Registered")
+                
+            }, function(error) {
+                console.error("Service Worker Registeration Failed " + error);
             });
     } else {
-        console.log("Service Worker Not Supported");
+        console.error("Service Worker Not Supported");
     }
 </script>
 </body>

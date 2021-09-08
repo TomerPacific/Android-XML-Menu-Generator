@@ -30,9 +30,11 @@ function showMenuItems() {
 
 	let showAsActionLabel;
 	let wrapperShowAsActionDiv;
-
+	
+	itemForm.innerHTML = '';
 	items.style.visibility = 'visible';
 	amountOfMenuItems = document.getElementById("menuItems").value;
+	
 	for(let i = 0; i < amountOfMenuItems; i++) {
 		let idLabel = document.createElement('label');
 		idLabel.innerHTML = 'Item ID:';

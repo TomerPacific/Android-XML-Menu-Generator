@@ -13,7 +13,6 @@ let inputMenuItems = document.getElementById("menuItems");
 let showAsActionSelect;
 
 function showAmountOfMenuItems() {
-	
 	menuItems.style.visibility = "visible";
 	menuType =  typeOfMenu.value;
 	optionsMenuFlag = menuType === "Options";
@@ -161,7 +160,7 @@ function copyText() {
 
 function sendMail(e) {
 	e.preventDefault();
-	let mailInput = document.getElementById("email");
+	let mailInput = document.getElementById(EMAIL_ELEMENT_ID);
 	if (!mailInput.value || !emailNotValid(mailInput.value) || !xml.value) {
 		mailInput.value = "";
 		return;
@@ -169,13 +168,13 @@ function sendMail(e) {
 		Email.send({
 			    SecureToken : "0a44347d-fa93-486b-8ede-d98a744f0526",
 			    To : mailInput.value,
-			    From : "tomerpacific@gmail.com",
-			    Subject : "Android XML Menu Generator",
+			    From : OWN_EMAIL,
+			    Subject : APP_TITLE,
 			    Body : xml.innerHTML.toString()
 			}).then(
 		  		function(message) {
-		  		 alert("Your email has been sent! Check your spam folder if you don't find it in the main one");
-		  		location.reload();
+					alert("Your email has been sent! Check your spam folder if you don't find it in the main one");
+		  			location.reload();
 		  		}
 			);
 	}
@@ -184,7 +183,6 @@ function sendMail(e) {
 
 function emailNotValid(email) {
 	var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 	return email.match(emailRegex);
 }
 

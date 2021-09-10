@@ -9,3 +9,8 @@ const PREFIX = `<?xml version="1.0" encoding="utf-8"?>
 				<menu xmlns:android="http://schemas.android.com/apk/res/android"
     			      xmlns:app="http://schemas.android.com/apk/res-auto"
     			      xmlns:actionProviderClass="http://schemas.android.com/tools">\n`;
+
+const APP_TITLE = "Android XML Menu Generator";
+const OWN_EMAIL = "tomerpacific@gmail.com";
+
+const EMAIL_ELEMENT_ID = "email";

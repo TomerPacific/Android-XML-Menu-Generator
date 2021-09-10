@@ -1,10 +1,3 @@
-const ITEM_ID = "itemId";
-const ITEM_ICON = "itemIcon";
-const ITEM_TITLE = "itemTitle";
-const SHOW_AS_ACTION = "itemShowAsAction";
-
-const SHOW_AS_VALUES = ['always', 'never', 'ifRoom', 'withText', 'collapseActionView'];
-
 
 let menuType = '';
 let amountOfMenuItems = 0;
@@ -123,14 +116,10 @@ function generateMenu() {
 	if (menuType === '' || amountOfMenuItems === 0) {
 		return;
 	}
-	var prefix = `<?xml version="1.0" encoding="utf-8"?>
-				<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    			      xmlns:app="http://schemas.android.com/apk/res-auto"
-    			      xmlns:actionProviderClass="http://schemas.android.com/tools">\n`;
-
    
+	let generatedXML = PREFIX;
 
-   for (let i = 0; i < amountOfMenuItems; i++) {
+	for (let i = 0; i < amountOfMenuItems; i++) {
 	   	let menuItemId = document.getElementById(ITEM_ID + '_' + i);
 		let menuItem = '';
 
@@ -156,12 +145,11 @@ function generateMenu() {
 
 	   	menuItem += '\t \t \t \t />' + "\n";
 
-	   	prefix += menuItem;
+	   	generatedXML += menuItem;
 	   	menuItem = '';
-   }
+   	}
 
-   xml.innerHTML = prefix + ' \t \t \t \t </menu>';
-
+   	xml.innerHTML = generatedXML + ' \t \t \t \t </menu>';
 }
 
 

@@ -1,10 +1,3 @@
-const ITEM_ID = "itemId";
-const ITEM_ICON = "itemIcon";
-const ITEM_TITLE = "itemTitle";
-const SHOW_AS_ACTION = "itemShowAsAction";
-
-const SHOW_AS_VALUES = ['always', 'never', 'ifRoom', 'withText', 'collapseActionView'];
-
 
 let menuType = '';
 let amountOfMenuItems = 0;
@@ -20,7 +13,6 @@ let inputMenuItems = document.getElementById("menuItems");
 let showAsActionSelect;
 
 function showAmountOfMenuItems() {
-	
 	menuItems.style.visibility = "visible";
 	menuType =  typeOfMenu.value;
 	optionsMenuFlag = menuType === "Options";
@@ -123,14 +115,10 @@ function generateMenu() {
 	if (menuType === '' || amountOfMenuItems === 0) {
 		return;
 	}
-	var prefix = `<?xml version="1.0" encoding="utf-8"?>
-				<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    			      xmlns:app="http://schemas.android.com/apk/res-auto"
-    			      xmlns:actionProviderClass="http://schemas.android.com/tools">\n`;
-
    
+	let generatedXML = PREFIX;
 
-   for (let i = 0; i < amountOfMenuItems; i++) {
+	for (let i = 0; i < amountOfMenuItems; i++) {
 	   	let menuItemId = document.getElementById(ITEM_ID + '_' + i);
 		let menuItem = '';
 
@@ -156,50 +144,19 @@ function generateMenu() {
 
 	   	menuItem += '\t \t \t \t />' + "\n";
 
-	   	prefix += menuItem;
+	   	generatedXML += menuItem;
 	   	menuItem = '';
-   }
+   	}
 
-   xml.innerHTML = prefix + ' \t \t \t \t </menu>';
-
+   	xml.innerHTML = generatedXML + ' \t \t \t \t </menu>';
 }
 
 
 
 function copyText() {
 	xml.select();
-  	document.execCommand("copy");
+  	document.execCommand(COPY_ACTION);
 }
-
-function sendMail(e) {
-	e.preventDefault();
-	let mailInput = document.getElementById("email");
-	if (!mailInput.value || !emailNotValid(mailInput.value) || !xml.value) {
-		mailInput.value = "";
-		return;
-	} else {
-		Email.send({
-			    SecureToken : "0a44347d-fa93-486b-8ede-d98a744f0526",
-			    To : mailInput.value,
-			    From : "tomerpacific@gmail.com",
-			    Subject : "Android XML Menu Generator",
-			    Body : xml.innerHTML.toString()
-			}).then(
-		  		function(message) {
-		  		 alert("Your email has been sent! Check your spam folder if you don't find it in the main one");
-		  		location.reload();
-		  		}
-			);
-	}
-	
-}
-
-function emailNotValid(email) {
-	var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-	return email.match(emailRegex);
-}
-
 
 function reset() {
 	itemsForm.innerHTML = "";

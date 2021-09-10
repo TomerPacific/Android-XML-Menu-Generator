@@ -12,5 +12,7 @@ const PREFIX = `<?xml version="1.0" encoding="utf-8"?>
 
 const APP_TITLE = "Android XML Menu Generator";
 const OWN_EMAIL = "tomerpacific@gmail.com";
+const EMAIL_SENT_MESSAGE = "Your email has been sent! Check your spam folder if you don't find it in the main one";
 
 const EMAIL_ELEMENT_ID = "email";
+const COPY_ACTION = "copy";

@@ -155,7 +155,7 @@ function generateMenu() {
 
 function copyText() {
 	xml.select();
-  	document.execCommand("copy");
+  	document.execCommand(COPY_ACTION);
 }
 
 function sendMail(e) {
@@ -173,7 +173,7 @@ function sendMail(e) {
 			    Body : xml.innerHTML.toString()
 			}).then(
 		  		function(message) {
-					alert("Your email has been sent! Check your spam folder if you don't find it in the main one");
+					alert(EMAIL_SENT_MESSAGE);
 		  			location.reload();
 		  		}
 			);

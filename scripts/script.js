@@ -118,7 +118,7 @@ function generateMenu() {
    
 	let generatedXML = PREFIX;
 	let startingId = uniqueIdentifier - amountOfMenuItems;
-	console.log("Starting id " + startingId);
+	
 	for (let i = startingId; i < amountOfMenuItems; i++) {
 	   	let menuItemId = document.getElementById(ITEM_ID + '_' + i);
 		let menuItem = '';

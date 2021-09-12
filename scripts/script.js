@@ -18,7 +18,7 @@ function showAmountOfMenuItems() {
 	optionsMenuFlag = menuType === "Options";
 }
 
-function showMenuItems() {
+function createMenuItems() {
 
 	let showAsActionLabel;
 	let wrapperShowAsActionDiv;
@@ -104,9 +104,7 @@ function showMenuItems() {
 		}
 
 		itemForm.appendChild(document.createElement('br'));
-
 		uniqueIdentifier++;
-
 	}
 }
 

@@ -97,7 +97,7 @@
 <footer>
     <ul>
         <li>
-            <p>Copyright © 2019 <a href="https://tomerpacific.github.io/Portfolio/" target="_blank" rel="noreferrer">Tomer Ben - Rachel</a> | </p>
+            <p><span id="copyright">Copyright ©</span><a href="https://tomerpacific.github.io/Portfolio/" target="_blank" rel="noreferrer">Tomer Ben - Rachel</a> | </p>
         </li>
          <li>
             <p>Design by: <a href="http://ddiana.com/" target="_blank" rel="noreferrer">Diana Dikovski</a> &nbsp;</p>
@@ -115,7 +115,7 @@
                .then(function() { 
                 
             }, function(error) {
-                console.error("Service Worker Registeration Failed " + error);
+                console.error("Service Worker Registration Failed " + error);
             });
     } else {
         console.error("Service Worker Not Supported");

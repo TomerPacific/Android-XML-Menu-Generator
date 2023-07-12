@@ -166,3 +166,11 @@ function reset() {
 	typeOfMenu.selectedIndex = 0;
 	inputMenuItems.value = "";
 }
+
+function setCopyrightYear() {
+    const copyrightSpan = document.getElementById("copyright");
+    const currentYear = new Date().getFullYear();
+    copyrightSpan.innerHTML += currentYear + " ";
+}
+
+setCopyrightYear();
